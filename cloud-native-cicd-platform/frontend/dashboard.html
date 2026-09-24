@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CI/CD Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>CI/CD Platform</h2>
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="pipeline.html">
+                Pipelines
+            </a>
+
+            <a href="#">
+                Deployments
+            </a>
+
+            <a href="#">
+                Logs
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header>
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Cloud-Native CI/CD Platform</p>
+            </div>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <h3>Projects</h3>
+
+                <p>5</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Successful</h3>
+
+                <p>18</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Failed</h3>
+
+                <p>2</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Running</h3>
+
+                <p>1</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Deployments -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h2>Recent Deployments</h2>
+
+                <button onclick="openProjects()">
+                    + New Project
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Project</th>
+
+                        <th>Version</th>
+
+                        <th>Status</th>
+
+                        <th>Time</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>#18</td>
+
+                        <td>my-python-app</td>
+
+                        <td>v18</td>
+
+                        <td>
+                            <span class="status success">
+                                SUCCESS
+                            </span>
+                        </td>
+
+                        <td>2 minutes ago</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>#17</td>
+
+                        <td>student-api</td>
+
+                        <td>v17</td>
+
+                        <td>
+                            <span class="status success">
+                                SUCCESS
+                            </span>
+                        </td>
+
+                        <td>15 minutes ago</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>#16</td>
+
+                        <td>demo-app</td>
+
+                        <td>v16</td>
+
+                        <td>
+                            <span class="status failed">
+                                FAILED
+                            </span>
+                        </td>
+
+                        <td>1 hour ago</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>#15</td>
+
+                        <td>weather-api</td>
+
+                        <td>v15</td>
+
+                        <td>
+                            <span class="status running">
+                                RUNNING
+                            </span>
+                        </td>
+
+                        <td>2 hours ago</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Pipeline -->
+
+        <section class="panel">
+
+            <h2>Latest Pipeline</h2>
+
+            <div class="pipeline">
+
+                <div class="stage success-stage">
+                    ✓ SOURCE
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="stage success-stage">
+                    ✓ TEST
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="stage success-stage">
+                    ✓ BUILD
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="stage success-stage">
+                    ✓ DOCKER
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="stage success-stage">
+                    ✓ DEPLOY
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="stage success-stage">
+                    ✓ HEALTH
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
